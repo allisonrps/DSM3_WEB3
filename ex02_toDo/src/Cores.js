@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Cadastro.css';
+import './Cores.css';
 
 function Cores() {
     const [backgroundColor, setBackgroundColor] = useState('');
