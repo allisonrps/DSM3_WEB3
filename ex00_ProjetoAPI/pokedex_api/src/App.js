@@ -1,22 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from 'react';
+import './style.css';
 
 function App() {
+  const {pokemon, setPokemon} = useState();
+
+function loadAPI(){
+  let url = 'https://www.pokeapi.co/api/v2/pokemon/giratina'
+  fetch(url)
+  .then(response => response.json())
+  .then(json => {
+    console.log(json)
+    setPokemon(json)
+  })
+  .catch(err => console.log(err));
+}
+
+  useEffect (() => {
+
+    loadAPI();
+
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+    <div class="container">
+      <header>
+        <strong>POKÉMON API</strong>
       </header>
     </div>
   );
