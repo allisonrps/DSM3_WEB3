@@ -3,7 +3,7 @@ import './Cadastro.css';
 
 function Cadastro() {
     const [input, setInput] = useState('');
-    const [tarefas, setTarefas] = useState([
+    const [tarefas, se0tTarefas] = useState([
         "Pagar conta de luz",
         "Entregar Tarefa",
         "Estudar Programação"
