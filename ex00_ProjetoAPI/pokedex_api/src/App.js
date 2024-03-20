@@ -23,13 +23,13 @@ function App() {
 
   useEffect(() => {
     // Carrega o Pokémon Ditto por padrão
-    loadAPI("ditto");
+    loadAPI("dragonite");
   }, []);
 
   return (
     <div className="container">
       <header>
-        <strong>POKÉMON API</strong>
+        <strong>POKÉDEX</strong>
       </header>
       
       <form className="search"onSubmit={handleSubmit}>
@@ -58,13 +58,13 @@ function App() {
       </div>
       <div className="pokemon-details">
         <div className="pokemon-image">
-          <img src={pokemon.sprites && pokemon.sprites.front_default} alt={pokemon.name} />
+          <img src={pokemon.sprites && pokemon.sprites.other.dream_world.front_default} alt={pokemon.name} />
         </div>
         <div className="pokemon-stats">
-          <div>PESO: {pokemon.weight / 10} KG.</div>
-          <div>ALTURA: {pokemon.height / 10} M.</div>
-          <div>TIPO: {pokemon.types && pokemon.types.map(type => type.type.name).join(', ')}</div>
-          <div>HABILIDADES: {pokemon.ability}</div>
+          <div><strong>PESO:</strong> {pokemon.weight / 10} KG.</div>
+          <div><strong>ALTURA:</strong> {pokemon.height / 10} M.</div>
+          <div><strong>TIPO:</strong> {pokemon.types && pokemon.types.map(type => type.type.name).join(', ')}</div>
+          <div><strong>HABILIDADES:</strong> {pokemon.ability}</div>
         </div>
       </div>
     </div>
