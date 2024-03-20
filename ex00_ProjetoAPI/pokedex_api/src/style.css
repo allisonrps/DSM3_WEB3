@@ -4,6 +4,7 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 body {
@@ -13,12 +14,65 @@ body {
 }
 
 header {
+    padding-bottom: 30px;
+    padding-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 60px;
     height: 60px;
     width: 100%;
     background-color: gold;
-    color: white;
+    color: rgb(0, 0, 0);
 }
+  
+  .pokemon-info {
+    font-size: 60px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .pokemon-number {
+    text-align: left;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+
+  .pokemon-name {
+    text-align: left;
+    margin-left: 30px;
+    padding: 10px;
+    text-transform: uppercase;
+  }
+  
+  .pokemon-details {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .pokemon-image img {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+  }
+  
+  .pokemon-stats {
+    text-align: left;
+    padding: 10px;
+  }
+  
+  .pokemon-stats div {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .search {
+    padding: 10px;
+    justify-content: space-between;
+  }
+  
