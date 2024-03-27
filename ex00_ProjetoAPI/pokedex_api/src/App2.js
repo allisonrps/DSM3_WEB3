@@ -64,7 +64,7 @@ function App() {
           <div><strong>PESO:</strong> {pokemon.weight / 10} KG.</div>
           <div><strong>ALTURA:</strong> {pokemon.height / 10} M.</div>
           <div><strong>TIPO:</strong> {pokemon.types && pokemon.types.map(type => type.type.name).join(', ')}</div>
-          <div><strong>HABILIDADES:</strong> {pokemon.ability}</div>
+          <div><strong>HABILIDADES:</strong> {pokemon.ability} </div>
         </div>
       </div>
     </div>
