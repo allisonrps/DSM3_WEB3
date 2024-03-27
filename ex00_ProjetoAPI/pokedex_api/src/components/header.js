@@ -3,13 +3,9 @@ import React from 'react';
 function Header() {
   return (
 
-
-    
     <header>
-      <strong>POKÉDEX</strong>
+      <img src="/img/Pokedex_logo.png" alt="POKEDEX" />
     </header>
-
-
 
   );
 }

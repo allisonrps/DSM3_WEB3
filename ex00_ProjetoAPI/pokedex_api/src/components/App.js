@@ -32,9 +32,12 @@ function App() {
 
   return (
     <div className="container">
+
       <Header />
       <Search pokemonName={pokemonName} setPokemonName={setPokemonName} handleSubmit={handleSubmit} />
+      <br></br>
       <Card pokemon={pokemon} />
+      <br></br>
       <Footer />
     </div>
   );

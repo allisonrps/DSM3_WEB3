@@ -3,14 +3,13 @@ import React from 'react';
 function Card({ pokemon }) {
   return (
     <div className="pokemon-card">
+    
       <div className="pokemon-info">
-        <div className="pokemon-number">
-          <div># {pokemon.id}</div>
+        <div className="pokemon-number-name">
+          <div># {pokemon.id} {pokemon.name}</div>
         </div>
-        <div className="pokemon-name">
-          <div>{pokemon.name}</div>
-        </div>
-      </div>
+       </div>
+ 
       <div className="pokemon-details">
         <div className="pokemon-image">
           <img
