@@ -4,7 +4,7 @@ function Header() {
   return (
 
     <header>
-      <img src="/img/Pokedex_logo.png" alt="POKEDEX" />
+      <img src="/img/Pokédex_logo.png" alt="POKEDEX" />
     </header>
 
   );

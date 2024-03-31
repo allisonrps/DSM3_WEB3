@@ -11,7 +11,7 @@ function Search({ pokemonName, setPokemonName, handleSubmit }) {
         placeholder="Pesquisar"
         required
       />
-      <button type="submit" className="btn btn-primary">Pesquisar</button>
+      <button type="submit" className="btn btn-light">Pesquisar</button>
     </form>
   );
 }
