@@ -10,42 +10,43 @@ function Card({ pokemon }) {
   const determineBackgroundColor = (type) => {
     switch (type) {
       case 'grass':
-        return '#78C850'; // Verde
+        return '#78C850'; 
       case 'fire':
-        return '#F08030'; // Vermelho
+        return '#F08030'; 
       case 'water':
-        return '#6890F0'; // Azul
+        return '#6890F0'; 
       case 'electric':
-        return '#eeff00'; // Verde
+        return '#eeff00'; 
       case 'normal':
-        return '#dfdfdf'; // Verde
+        return '#dfdfdf'; 
       case 'bug':
-        return '#A8B820'; // Verde-claro
+        return '#A8B820'; 
       case 'fairy':
-        return '#ffafe7'; // Verde
+        return '#ff00bf'; 
       case 'dark':
-        return '#3c3c3c'; // Verde
-      case 'fighter':
-        return '#c50000'; // Verde
+        return '#3c3c3c'; 
+      case 'fighting':
+        return '#c50000'; 
       case 'steel':
-        return '#858585'; // Verde
+        return '#858585'; 
       case 'ghost':
-        return '#62007d'; // Verde
+        return '#62007d'; 
       case 'dragon':
-        return '#1792b1'; // Verde
+        return '#1792b1'; 
       case 'flyer':
-        return '#6de2ff'; // Verde
+        return '#aaebff'; 
       case 'rock':
-        return '#797462'; // Verde
+        return '#797462'; 
       case 'ground':
-        return '#ab8600'; // Verde
+        return '#ab8600'; 
       case 'poison':
-        return '#8b06d3'; // Verde
+        return '#8b06d3'; 
       case 'psychic':
-        return '#eb9cc9'; // Verde
-      // Adicione mais casos para outros tipos de Pokémon conforme necessário
+        return '#eb9cc9'; 
+      case 'ice':
+        return '#00c3ff'; 
       default:
-        return '#A8A878'; // Cor padrão para outros tipos não listados
+        return '#ffffff'; // Cor padrão para outros tipos não listados
     }
   };
 
@@ -64,7 +65,7 @@ function Card({ pokemon }) {
 
       <div className="pokemon-image">
         <img
-          src={pokemon.sprites && pokemon.sprites.other.dream_world.front_default}
+          src={pokemon.sprites && pokemon.sprites.other.home.front_default}
           alt={pokemon.name}
         />
       </div>

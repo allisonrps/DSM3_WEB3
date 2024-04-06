@@ -35,6 +35,28 @@ header {
   background-color: rgb(255, 0, 0);
 }
 
+.generations {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 70, 70);
+}
+  
+  .generation-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 5px; /* entre links */
+  }
+  
+  .link-separator {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: rgb(255, 165, 165); /*separador*/
+  }
+  
 .search {
   padding: 20px;
   display: flex;
@@ -68,7 +90,7 @@ header {
   
   .pokemon-details {
     width: 100%;
-    background-color: #da88b6;
+    background-color: #ff00bf;
     display: flex;
     align-items: flex-start;
     text-transform: uppercase;
@@ -98,5 +120,26 @@ header {
     background-color: rgb(255, 169, 169);
   }
 
-
+  .pokemon-card {
+    border-style: solid;
+    border-color: rgb(64, 64, 64);
+    width: 200px; /* Reduzindo a largura do card */
+    margin: 10px; /* Adicionando margem entre os cards */
+  }
+  
+  .pokemon-info {
+    padding: 10px; /* Reduzindo o padding do conteúdo do card */
+    font-size: 20px; /* Reduzindo o tamanho da fonte */
+  }
+  
+  .pokemon-image img {
+    max-width: 100%; /* Garantindo que a imagem do Pokémon se ajuste ao tamanho do contêiner */
+    height: auto; /* Garantindo que a altura da imagem seja ajustada automaticamente */
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap; /* Permitindo que os cards quebrem para a próxima linha */
+    justify-content: center; /* Centralizando os cards horizontalmente */
+  }
   

@@ -1,45 +1,59 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Header from './header.js';
 import Search from './search.js';
 import Card from './card.js';
 import Footer from './footer.js';
+import Generations from './generations.js';
 import './style.css';
 
 function App() {
-  const [pokemon, setPokemon] = useState({});
+  const [pokemonList, setPokemonList] = useState([]);
   const [pokemonName, setPokemonName] = useState("");
 
-  function loadAPI(name) {
-    let url = `https://pokeapi.co/api/v2/pokemon/${name.toLowerCase()}`;
-    fetch(url)
+  function loadAPI(id) {
+    if (!id) return Promise.resolve(null);
+    let url = `https://pokeapi.co/api/v2/pokemon/${id}`;
+    return fetch(url)
       .then(response => response.json())
-      .then(res => {
-        console.log(res);
-        setPokemon(res);
-      })
       .catch(err => console.log(err));
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    loadAPI(pokemonName);
+    const pokemon1 = await loadAPI(pokemonName);
+    const pokemon2 = await loadAPI(pokemonName);
+    const pokemon3 = await loadAPI(pokemonName);
+    setPokemonList([pokemon1, pokemon2, pokemon3]);
   }
 
   useEffect(() => {
-    // Carrega o Pokémon Ditto por padrão
-    loadAPI("dragonite");
+    async function loadRandomPokemons() {
+      const randomPokemons = [];
+      for (let i = 0; i < 3; i++) {
+        const randomPokemonId = Math.floor(Math.random() * 898) + 1;
+        const pokemon = await loadAPI(randomPokemonId);
+        randomPokemons.push(pokemon);
+      }
+      setPokemonList(randomPokemons);
+    }
+    loadRandomPokemons();
   }, []);
 
   return (
-    <div className="container">
-
-      <Header />
-      <Search pokemonName={pokemonName} setPokemonName={setPokemonName} handleSubmit={handleSubmit} />
-      <br></br>
-      <Card pokemon={pokemon} />
-      <br></br>
-      <Footer />
-    </div>
+    <Router>
+      <div className="container">
+        <Header />
+        <Generations />
+        <Search pokemonName={pokemonName} setPokemonName={setPokemonName} handleSubmit={handleSubmit} />
+        <div className="cards-container">
+          {pokemonList.map((pokemon, index) => (
+            <Card key={index} pokemon={pokemon} style={{ width: '30%', margin: '0 10px' }} />
+          ))}
+        </div>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
