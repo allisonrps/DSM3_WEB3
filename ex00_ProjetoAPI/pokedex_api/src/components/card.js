@@ -1,12 +1,9 @@
-// src/components/Card.js
-
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Card({ pokemon }) {
-  // Obtendo o primeiro tipo do Pokémon e determinando a cor de fundo do card
+function Card({ pokemon, onClick }) {
   const pokemonType = pokemon.types && pokemon.types.length > 0 ? pokemon.types[0].type.name : '';
   
-  // Função para determinar a cor de fundo com base no tipo do Pokémon
   const determineBackgroundColor = (type) => {
     switch (type) {
       case 'grass':
@@ -24,7 +21,7 @@ function Card({ pokemon }) {
       case 'fairy':
         return '#ff00bf'; 
       case 'dark':
-        return '#3c3c3c'; 
+        return '#555555'; 
       case 'fighting':
         return '#c50000'; 
       case 'steel':
@@ -50,16 +47,19 @@ function Card({ pokemon }) {
     }
   };
 
-  // Estilo dinâmico para o card com base no tipo do Pokémon
   const cardStyle = {
     backgroundColor: determineBackgroundColor(pokemonType),
   };
 
   return (
-    <div className="pokemon-card" style={cardStyle}>
+    <div className="pokemon-card" style={cardStyle} onClick={() => onClick(pokemon)}>
+      <div className="pokemon-number" style={{ fontSize: '35px' }}>
+        <strong>#{pokemon.id}</strong>
+      </div>
+
       <div className="pokemon-info">
-        <div className="pokemon-number-name">
-          <div># {pokemon.id} {pokemon.name}</div>
+        <div className="pokemon-name">
+          {pokemon.name}
         </div>
       </div>
 
@@ -70,7 +70,7 @@ function Card({ pokemon }) {
         />
       </div>
 
-      {/* Removendo a seção de estatísticas do Pokémon */}
+      <Link to={`/pokemon/${pokemon.id}`} className="pokemon-card-link">DETALHES</Link>
     </div>
   );
 }

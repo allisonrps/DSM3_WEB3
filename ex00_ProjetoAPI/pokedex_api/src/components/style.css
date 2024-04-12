@@ -67,6 +67,8 @@ header {
   background-color: rgb(255, 102, 102);
 
 }
+
+
   
   .pokemon-card {
     border-style: solid;
@@ -90,7 +92,6 @@ header {
   
   .pokemon-details {
     width: 100%;
-    background-color: #ff00bf;
     display: flex;
     align-items: flex-start;
     text-transform: uppercase;
@@ -115,16 +116,21 @@ header {
     font-size: 15px;
   }
 
-  .footer div {
-    font-size: 25px;
-    background-color: rgb(255, 169, 169);
-  }
+
+
 
   .pokemon-card {
     border-style: solid;
-    border-color: rgb(64, 64, 64);
+    border-color: #555555;
     width: 200px; /* Reduzindo a largura do card */
     margin: 10px; /* Adicionando margem entre os cards */
+  }
+
+  .pokemon-card .pokemon-name {
+    font-size: 1.2em; /* Tamanho do texto responsivo */
+    overflow: hidden; /* Oculta qualquer texto que transborde do contêiner */
+    text-overflow: ellipsis; /* Mostra reticências (...) quando o texto transborda */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
   }
   
   .pokemon-info {
@@ -141,5 +147,63 @@ header {
     display: flex;
     flex-wrap: wrap; /* Permitindo que os cards quebrem para a próxima linha */
     justify-content: center; /* Centralizando os cards horizontalmente */
+  }
+  
+
+  /* CARD FULL */
+
+  .pokemon-card-full {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-style: solid;
+    border-color: rgb(64, 64, 64);
+    background-color: rgb(255, 255, 255);
+  }
+  .pokemon-image {
+    flex: 1;
+    padding: 10px;
+  }
+  .pokemon-image img {
+    width: 100%;
+    height: auto;
+  }
+  .pokemon-details {
+    flex: 2;
+    padding: 10px;
+  } 
+  .pokemon-info {
+    margin-bottom: 20px;
+  }
+  .pokemon-stats div {
+    margin-bottom: 10px;
+  }
+  .pokemon-stats strong {
+    margin-right: 5px;
+  }
+
+  .pokemon-card-link {
+    font-size: 1.2em; /* Tamanho do texto responsivo */
+    overflow: hidden; /* Oculta qualquer texto que transborde do contêiner */
+    text-overflow: ellipsis; /* Mostra reticências (...) quando o texto transborda */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    background-color: transparent; /* Cor de fundo transparente */
+    color: #000000; /* Cor do texto */
+    padding: 10px 10px; /* Espaçamento interno */
+
+    border-radius: 5px; /* Borda arredondada */
+    text-decoration: none; /* Remover sublinhado */
+    transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
+  }
+  
+  .pokemon-card-link:hover {
+
+    color: white; /* Cor do texto quando hover */
+  }
+  
+  /* modal */
+  .modal-dialog {
+    max-height: 80vh; /* Defina a altura máxima do modal como 80% da altura da viewport */
+    overflow-y: auto; /* Adicione uma barra de rolagem vertical se o conteúdo exceder a altura máxima */
   }
   
