@@ -56,12 +56,15 @@ function App() {
   return (
     <Router>
       <div className="container">
+
+
         {showModal && selectedPokemon && (
           <div className="modal" style={{ display: 'FLEX' }} tabIndex="-1">
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h5 className="modal-title">DETALHES</h5>
+                  {/* Trocar o título do modal para o número e nome do Pokémon */}
+                  <h5 className="modal-title">#{selectedPokemon.id} - {selectedPokemon.name}</h5>
                   <button type="button" className="btn-close" onClick={closeModal}></button>
                 </div>
                 <div className="modal-body">

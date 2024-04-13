@@ -53,7 +53,7 @@ function Card({ pokemon, onClick }) {
 
   return (
     <div className="pokemon-card" style={cardStyle} onClick={() => onClick(pokemon)}>
-      <div className="pokemon-number" style={{ fontSize: '35px' }}>
+      <div className="pokemon-number" style={{ fontSize: '50px' }}>
         <strong>#{pokemon.id}</strong>
       </div>
 
@@ -65,7 +65,7 @@ function Card({ pokemon, onClick }) {
 
       <div className="pokemon-image">
         <img
-          src={pokemon.sprites && pokemon.sprites.other.home.front_default}
+          src={pokemon.sprites && pokemon.sprites.other['official-artwork'].front_default}
           alt={pokemon.name}
         />
       </div>

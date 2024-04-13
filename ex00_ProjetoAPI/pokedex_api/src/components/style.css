@@ -68,13 +68,12 @@ header {
 
 }
 
-
-  
   .pokemon-card {
     border-style: solid;
     border-color: rgb(64, 64, 64);
-    width: 400px;
-    background-color: rgb(255, 255, 255);
+    height: 350px;
+    width: 500px;
+
   }
 
   .pokemon-info {
@@ -82,7 +81,7 @@ header {
     align-items: center;
     height: 15px;
     width: 100%;
-    font-size: 40px;
+    font-size: 20px;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -111,19 +110,18 @@ header {
   }
   
   .pokemon-stats div {
-    margin-bottom: 10px;
-    margin-top: 10px;
-    font-size: 15px;
+    margin-bottom: 0px;
+    margin-top: 5px;
+    font-size: 17px;
   }
-
-
-
 
   .pokemon-card {
     border-style: solid;
-    border-color: #555555;
+    border-color: #000000;
     width: 200px; /* Reduzindo a largura do card */
     margin: 10px; /* Adicionando margem entre os cards */
+    border-radius: 10px;
+    box-shadow: "20px 20px 20px rgba (0, 0, 0, 0.8)";
   }
 
   .pokemon-card .pokemon-name {
@@ -133,7 +131,8 @@ header {
     white-space: nowrap; /* Impede que o texto quebre em várias linhas */
   }
   
-  .pokemon-info {
+  .pokemon-info { /* nome do poke do card */
+    font-size: 1.2em; /* Tamanho do texto responsivo */
     padding: 10px; /* Reduzindo o padding do conteúdo do card */
     font-size: 20px; /* Reduzindo o tamanho da fonte */
   }
@@ -151,15 +150,14 @@ header {
   
 
   /* CARD FULL */
-
   .pokemon-card-full {
     display: flex;
     align-items: center;
     width: 100%;
-    border-style: solid;
     border-color: rgb(64, 64, 64);
     background-color: rgb(255, 255, 255);
   }
+  /* POKEMON DOS CARDS */
   .pokemon-image {
     flex: 1;
     padding: 10px;
@@ -171,12 +169,13 @@ header {
   .pokemon-details {
     flex: 2;
     padding: 10px;
+    font-size: 30px;
   } 
   .pokemon-info {
-    margin-bottom: 20px;
+    margin-bottom: 2px;
   }
   .pokemon-stats div {
-    margin-bottom: 10px;
+    margin-bottom: 2px;
   }
   .pokemon-stats strong {
     margin-right: 5px;
@@ -190,20 +189,36 @@ header {
     background-color: transparent; /* Cor de fundo transparente */
     color: #000000; /* Cor do texto */
     padding: 10px 10px; /* Espaçamento interno */
-
     border-radius: 5px; /* Borda arredondada */
     text-decoration: none; /* Remover sublinhado */
     transition: background-color 0.3s ease; /* Transição suave de cor de fundo */
   }
   
   .pokemon-card-link:hover {
-
     color: white; /* Cor do texto quando hover */
   }
   
   /* modal */
   .modal-dialog {
-    max-height: 80vh; /* Defina a altura máxima do modal como 80% da altura da viewport */
+    height: 1000px;
+    weight: 800px;
+    max-height: 100vh; /* Defina a altura máxima do modal como 80% da altura da viewport */
     overflow-y: auto; /* Adicione uma barra de rolagem vertical se o conteúdo exceder a altura máxima */
+  }
+
+  .modal-title {
+    padding: 30px;
+    align-items: center;
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.2em; /* Tamanho do texto responsivo */
+    overflow: hidden; /* Oculta qualquer texto que transborde do contêiner */
+    text-overflow: ellipsis; /* Mostra reticências (...) quando o texto transborda */
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    color: #000000; /* Cor do texto */
+    padding: 10px; /* Espaçamento interno */
   }
   

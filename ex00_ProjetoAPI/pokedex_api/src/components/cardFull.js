@@ -32,35 +32,35 @@ function CardFull({ pokemonId }) {
       case 'water':
         return '#6890F0';
       case 'electric':
-        return '#FFD700';
+        return '#eeff00';
       case 'normal':
-        return '#A8A878';
+        return '#dfdfdf';
       case 'bug':
         return '#A8B820';
       case 'fairy':
-        return '#EE99AC';
+        return '#ff00bf';
       case 'dark':
-        return '#705848';
+        return '#555555';
       case 'fighting':
-        return '#C03028';
+        return '#c50000';
       case 'steel':
-        return '#B8B8D0';
+        return '#858585';
       case 'ghost':
-        return '#705898';
+        return '#62007d';
       case 'dragon':
-        return '#7038F8';
-      case 'flying':
-        return '#A890F0';
+        return '#1792b1';
+      case 'flyer':
+        return '#aaebff';
       case 'rock':
-        return '#B8A038';
+        return '#797462';
       case 'ground':
-        return '#E0C068';
+        return '#ab8600';
       case 'poison':
-        return '#A040A0';
+        return '#8b06d3';
       case 'psychic':
-        return '#F85888';
+        return '#eb9cc9';
       case 'ice':
-        return '#98D8D8';
+        return '#00c3ff';
       default:
         return '#ffffff'; // Cor padrão para outros tipos não listados
     }
@@ -71,40 +71,49 @@ function CardFull({ pokemonId }) {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div>Carregando...</div>;
   }
 
   return (
-    <div className="pokemon-card-full" style={{ backgroundColor: determineBackgroundColor(pokemon.types) }}>
-      <div className="pokemon-image">
-        <img
-          src={pokemon.sprites.other['official-artwork'].front_default}
-          alt={pokemon.name}
-          style={{ maxWidth: '100%', height: 'auto' }}
-        />
-      </div>
+    <div
+      className="pokemon-card-full"
+      style={{
+        backgroundColor: determineBackgroundColor(pokemon.types),
+        backgroundImage: `url(${pokemon.sprites.other['official-artwork'].front_default})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '350px', // Largura ajustada
+        height: '550px', // Largura ajustada
+        maxHeight: '700px', // Altura máxima ajustada
+        padding: '10px', // Espaçamento interno
+        borderRadius: '10px', // Borda arredondada
+        boxShadow: '0px 0px 10px rgba (0, 0, 0, 0.2)', // Sombra
+        boxSizing: 'border-box', // Incluir padding e border na largura e altura
+
+      }}
+    >
       <div className="pokemon-details">
         <div className="pokemon-info">
           <div className="pokemon-number-name">
-            <div>
-              <strong>#{pokemon.id}</strong> {pokemon.name}
-            </div>
+
           </div>
           <div className="pokemon-stats">
+
             <div>
-              <strong>Type:</strong> {pokemon.types.map(type => type.type.name).join(', ')}
+              <br></br>
+              <strong>TYPE:</strong> {pokemon.types.map((type) => type.type.name).join(', ')}
             </div>
             <div>
-              <strong>Abilities:</strong> {pokemon.abilities.map(ability => ability.ability.name).join(', ')}
+              <strong>ABILITIES:</strong> {pokemon.abilities.map((ability) => ability.ability.name).join(', ')}
             </div>
             <div>
-              <strong>Height:</strong> {pokemon.height / 10} m
+              <strong>HEIGHT:</strong> {pokemon.height / 10} m
             </div>
             <div>
-              <strong>Weight:</strong> {pokemon.weight / 10} kg
+              <strong>WEIGHT:</strong> {pokemon.weight / 10} kg
             </div>
             <div>
-              <strong>Attacks:</strong> 
+              <strong>ATTACKS:</strong>
               <ul>
                 {pokemon.moves.slice(0, 5).map((move, index) => (
                   <li key={index}>{move.move.name}</li>
@@ -124,5 +133,3 @@ function CardFull({ pokemonId }) {
 }
 
 export default CardFull;
-
-
