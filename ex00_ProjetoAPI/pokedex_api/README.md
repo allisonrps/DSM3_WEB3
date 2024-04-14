@@ -10,11 +10,7 @@
 
 * - * - Frameworks e Ferramentas:  - * - *
 
-![HTML](https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/html.png)
-![CSS](https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/css.png)
-![JAVA SCRIPT](https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/js.png)
-![BOOTSTRAP](https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/bootstrap.png)
-![VISUAL STUDIO](https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/vscode.png)
+<img src="https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/html.png" alt="HTML" width="50" height="50"> <img src="https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/css.png" alt="CSS" width="50" height="50"> <img src="https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/js.png" alt="JavaScript" width="50" height="50"> <img src="https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/bootstrap.png" alt="Bootstrap" width="50" height="50"> <img src="https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/vscode.png" alt="Visual Studio Code" width="50" height="50">
 
 Starting the dev server
 
