@@ -4,7 +4,6 @@ import Header from './header.js';
 import Search from './search.js';
 import Card from './card.js';
 import Footer from './footer.js';
-import Generations from './generations.js';
 import CardFull from './cardFull.js';
 import './style.css';
 
@@ -77,7 +76,7 @@ function App() {
         )}
 
         <Header />
-        <Generations />
+
         <Search pokemonName={pokemonName} setPokemonName={setPokemonName} handleSubmit={handleSubmit} />
 
         <div className="cards-container">

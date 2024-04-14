@@ -174,9 +174,12 @@ header {
   .pokemon-info {
     margin-bottom: 2px;
   }
-  .pokemon-stats div {
-    margin-bottom: 2px;
+  .pokemon-stats {
+    background-color: rgba(255, 255, 255, 0.7); /* Branco com 50% de opacidade */
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 10px; /* Espaçamento interno */
   }
+  
   .pokemon-stats strong {
     margin-right: 5px;
   }

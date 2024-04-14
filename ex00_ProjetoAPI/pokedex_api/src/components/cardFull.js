@@ -82,25 +82,20 @@ function CardFull({ pokemonId }) {
         backgroundImage: `url(${pokemon.sprites.other['official-artwork'].front_default})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        width: '350px', // Largura ajustada
-        height: '550px', // Largura ajustada
-        maxHeight: '700px', // Altura máxima ajustada
-        padding: '10px', // Espaçamento interno
-        borderRadius: '10px', // Borda arredondada
-        boxShadow: '0px 0px 10px rgba (0, 0, 0, 0.2)', // Sombra
-        boxSizing: 'border-box', // Incluir padding e border na largura e altura
-
+        width: '350px',
+        height: '550px',
+        maxHeight: '700px',
+        padding: '10px',
+        borderRadius: '10px',
+        boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)', // Removi espaços entre os valores rgba
+        boxSizing: 'border-box',
       }}
     >
       <div className="pokemon-details">
         <div className="pokemon-info">
-          <div className="pokemon-number-name">
-
-          </div>
+          <div className="pokemon-number-name"></div>
           <div className="pokemon-stats">
-
             <div>
-              <br></br>
               <strong>TYPE:</strong> {pokemon.types.map((type) => type.type.name).join(', ')}
             </div>
             <div>

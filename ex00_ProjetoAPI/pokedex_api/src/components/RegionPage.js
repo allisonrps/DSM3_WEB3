@@ -7,10 +7,16 @@ function RegionPage({ region }) {
   useEffect(() => {
     // Carrega a lista de Pokémon da região especificada
     async function loadPokemonList() {
-      const url = `https://pokeapi.co/api/v2/pokemon/${region}`;
-      const response = await fetch(url);
-      const data = await response.json();
-      setPokemonList(data.results);
+      try {
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${region}`);
+        if (!response.ok) {
+          throw new Error('Failed to fetch data');
+        }
+        const data = await response.json();
+        setPokemonList(data.results);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
     }
     loadPokemonList();
   }, [region]);
@@ -18,10 +24,16 @@ function RegionPage({ region }) {
   return (
     <div className="pokemon-list">
       {pokemonList.map((pokemon, index) => (
-        <Card key={index} pokemon={pokemon} />
+        <Card key={index} pokemonId={extractPokemonId(pokemon.url)} />
       ))}
     </div>
   );
+}
+
+function extractPokemonId(url) {
+  // Extrai o ID do URL do Pokémon
+  const parts = url.split('/');
+  return parts[parts.length - 2];
 }
 
 export default RegionPage;
