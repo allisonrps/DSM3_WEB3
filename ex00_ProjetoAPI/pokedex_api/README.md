@@ -31,7 +31,7 @@ instale o react
 -------------
 
 Clone o repositório:
-https://github.com/allisonrps/DSM3-WEB3.git
+https://github.com/allisonrps/DSM3_WEB3.git
 
 Entre na pasta: 'cd ex00_projeto_api'
 Entre na pasta: 'pokedex_api'
