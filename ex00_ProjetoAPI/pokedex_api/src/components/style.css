@@ -198,7 +198,7 @@ header {
   }
   
   .pokemon-card-link:hover {
-    color: white; /* Cor do texto quando hover */
+    color: #ffffff; /* Cor do texto quando hover */
   }
   
   /* modal */

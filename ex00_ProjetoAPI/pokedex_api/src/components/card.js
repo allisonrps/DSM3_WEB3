@@ -2,6 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function Card({ pokemon, onClick }) {
+  if (!pokemon) {
+    return null; // Retorna null se o objeto pokemon não estiver definido
+  }
+
   const pokemonType = pokemon.types && pokemon.types.length > 0 ? pokemon.types[0].type.name : '';
   
   const determineBackgroundColor = (type) => {
@@ -15,7 +19,7 @@ function Card({ pokemon, onClick }) {
       case 'electric':
         return '#eeff00'; 
       case 'normal':
-        return '#dfdfdf'; 
+        return '#fff8c3'; 
       case 'bug':
         return '#A8B820'; 
       case 'fairy':
@@ -30,7 +34,7 @@ function Card({ pokemon, onClick }) {
         return '#62007d'; 
       case 'dragon':
         return '#1792b1'; 
-      case 'flyer':
+      case 'flying':
         return '#aaebff'; 
       case 'rock':
         return '#797462'; 

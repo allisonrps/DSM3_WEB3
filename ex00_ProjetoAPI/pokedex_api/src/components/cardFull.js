@@ -26,41 +26,41 @@ function CardFull({ pokemonId }) {
     const type = types && types.length > 0 ? types[0].type.name : '';
     switch (type) {
       case 'grass':
-        return '#78C850';
+        return '#78C850'; 
       case 'fire':
-        return '#F08030';
+        return '#F08030'; 
       case 'water':
-        return '#6890F0';
+        return '#6890F0'; 
       case 'electric':
-        return '#eeff00';
+        return '#eeff00'; 
       case 'normal':
-        return '#dfdfdf';
+        return '#fff8c3'; 
       case 'bug':
-        return '#A8B820';
+        return '#A8B820'; 
       case 'fairy':
-        return '#ff00bf';
+        return '#ff00bf'; 
       case 'dark':
-        return '#555555';
+        return '#555555'; 
       case 'fighting':
-        return '#c50000';
+        return '#c50000'; 
       case 'steel':
-        return '#858585';
+        return '#858585'; 
       case 'ghost':
-        return '#62007d';
+        return '#62007d'; 
       case 'dragon':
-        return '#1792b1';
-      case 'flyer':
-        return '#aaebff';
+        return '#1792b1'; 
+      case 'flying':
+        return '#aaebff'; 
       case 'rock':
-        return '#797462';
+        return '#797462'; 
       case 'ground':
-        return '#ab8600';
+        return '#ab8600'; 
       case 'poison':
-        return '#8b06d3';
+        return '#8b06d3'; 
       case 'psychic':
-        return '#eb9cc9';
+        return '#eb9cc9'; 
       case 'ice':
-        return '#00c3ff';
+        return '#00c3ff'; 
       default:
         return '#ffffff'; // Cor padrão para outros tipos não listados
     }
