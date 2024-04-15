@@ -19,7 +19,8 @@ CARD COMPLETO COM STATS:
 
 NO NAVEGADOR MOBILE:
 
-![MOBILE](https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/home_mobile.jpg)![MOBILE](https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/card_mobile.jpg)
+<img src="https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/home_mobile.jpg" alt="HTML" width="200" height="500"> 
+<img src="https://github.com/allisonrps/DSM3_WEB3/blob/main/ex00_ProjetoAPI/pokedex_api/src/img/card_mobile.jpg" alt="HTML" width="200" height="500"> 
 
 ----------------------------------------
 
