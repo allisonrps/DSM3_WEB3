@@ -50,7 +50,7 @@ https://github.com/allisonrps/DSM3_WEB3.git
 
 • Execute o comando: 'npm start'
 
-Será automaticamente carregado no navegador pelo localhost:8080
+Será automaticamente carregado no navegador pelo localhost:3000
 
 -------------
 [PokeAPI](http://pokeapi.salestock.net/). 
